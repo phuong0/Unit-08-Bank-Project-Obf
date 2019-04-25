@@ -2,7 +2,6 @@ var deposit;
 var name;
 var depositorName = [];
 var moneyAdd = [];
-var total = 0;
 
 $(".newDeposit").click(function() {
     deposit = $(".accountDeposit").val();
@@ -14,6 +13,7 @@ $(".newDeposit").click(function() {
         depositorName.push(name);
         moneyAdd.push(parseInt(deposit));
         $(".numberT").text(depositorName.length);
+        var total = 0;
         moneyAdd.forEach(function(money){
              total += money;
              $(".totalA").text(total);
